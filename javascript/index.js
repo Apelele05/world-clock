@@ -44,7 +44,14 @@ function updateCity(event) {
     </div>
       <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format("A")}</small></div>
   </div>
-  `;
+  
+   <a href="#" class="home-link" id="home">← Back to homepage</a>
+`;
+
+  document.querySelector("#home").addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.reload();
+  });
 }
 
 let citiesSelectElement = document.querySelector("#city");
